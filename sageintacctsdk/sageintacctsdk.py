@@ -5,7 +5,7 @@ from .apis import ApiBase, Contacts, Locations, Employees, Accounts, ExpenseType
     Vendors, Bills, Projects, Departments, ChargeCardAccounts, ChargeCardTransactions, Customers, Items,\
     APPayments, Reimbursements, CheckingAccounts, SavingsAccounts, Tasks, ExpensePaymentTypes, Dimensions,\
     DimensionValues, LocationEntities, ARInvoices, ARPayments, TaxDetails, GLDetail, Classes, JournalEntries,\
-    RevRecSchedules, RevRecScheduleEntries, CostTypes, OrderEntryTransactions
+    RevRecSchedules, RevRecScheduleEntries, CostTypes, OrderEntryTransactions, ARPaymentDetail
 
 
 class SageIntacctSDK:
@@ -51,6 +51,7 @@ class SageIntacctSDK:
         self.ap_payments = APPayments()
         self.ar_invoices = ARInvoices()
         self.ar_payments = ARPayments()
+        self.ar_payment_detail = ARPaymentDetail()
         self.reimbursements = Reimbursements()
         self.checking_accounts = CheckingAccounts()
         self.savings_accounts = SavingsAccounts()
@@ -94,6 +95,7 @@ class SageIntacctSDK:
         self.ap_payments.set_sender_id(self.__sender_id)
         self.ar_invoices.set_sender_id(self.__sender_id)
         self.ar_payments.set_sender_id(self.__sender_id)
+        self.ar_payment_detail.set_sender_id(self.__sender_id)
         self.reimbursements.set_sender_id(self.__sender_id)
         self.checking_accounts.set_sender_id(self.__sender_id)
         self.savings_accounts.set_sender_id(self.__sender_id)
@@ -134,6 +136,7 @@ class SageIntacctSDK:
         self.ap_payments.set_sender_password(self.__sender_password)
         self.ar_invoices.set_sender_password(self.__sender_password)
         self.ar_payments.set_sender_password(self.__sender_password)
+        self.ar_payment_detail.set_sender_password(self.__sender_password)
         self.reimbursements.set_sender_password(self.__sender_password)
         self.checking_accounts.set_sender_password(self.__sender_password)
         self.savings_accounts.set_sender_password(self.__sender_password)
@@ -176,6 +179,7 @@ class SageIntacctSDK:
         self.ap_payments.set_session_id(self.__session_id)
         self.ar_invoices.set_session_id(self.__session_id)
         self.ar_payments.set_session_id(self.__session_id)
+        self.ar_payment_detail.set_session_id(self.__session_id)
         self.reimbursements.set_session_id(self.__session_id)
         self.checking_accounts.set_session_id(self.__session_id)
         self.savings_accounts.set_session_id(self.__session_id)
